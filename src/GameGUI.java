@@ -4,10 +4,12 @@ import java.awt.*;
 
 /**
  * @author Jon/nvpraz0r
- * @version 1.0
  * 
- * TO DO:
- *  -rework UI
+ * 
+ * To do:
+ *  -create rock paper scissors lizard spock
+ *      + with images that a player can select???
+ * 
  */
 
 /**
