@@ -1,6 +1,7 @@
 import java.util.Random;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 /**
  * @author Jon/nvpraz0r
@@ -15,14 +16,13 @@ import java.awt.*;
 /**
  * This class implements the UI for the game
  */
-public class GameGUI extends JFrame{
+public class GameGUI extends JFrame implements ActionListener{
     
     //class variables
-    public int target;
-    private int score;
-    private JTextField playerScoreField;
-    private JTextField playerGuessField;
-    private JTextField guessesRemainingField;
+    public int computerThrow;
+    public int score;
+    JButton[] handButtons = new JButton[5];
+    JButton rockButton, paperButton, scissorButton, lizardButton, spockButton;
     
     /**
      * This method sets the look and feel
@@ -43,26 +43,22 @@ public class GameGUI extends JFrame{
      */
     private void initComponents(){
 
+        setSize(500, 500);
+
+
+
+
+
+
+
         setVisible(true);
-        setSize(400, 280);
     }
 
     /**
      * This method resets key variables and text fields
     */
     public void setUpGame(){
-        //set random number
-        Random rand = new Random();
-        target = rand.nextInt(5) + 1;
 
-        //set game variables
-        playerScoreField.setText(Integer.toString(score));
-        guessesRemainingField.setText("5");
-        playerGuessField.setText("");
-
-        //REMOVE THIS
-        System.out.println(target); //printing target to test scoring
-        //REMOVE THIS
     }
     
     // Helper method to return GridBagConstraints objects
@@ -82,5 +78,10 @@ public class GameGUI extends JFrame{
         java.awt.EventQueue.invokeLater(() -> {
             new GameGUI().setVisible(true);            
         });
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e){
+
     }
 }
