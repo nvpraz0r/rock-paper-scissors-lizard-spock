@@ -42,7 +42,7 @@ public class GameGUI extends JFrame implements ActionListener{
      * This method defines and creates UI elements
      */
     private void initComponents(){
-
+        setTitle("RockPaperScissorsLizardSpock");
         setSize(500, 500);
 
 
@@ -61,15 +61,15 @@ public class GameGUI extends JFrame implements ActionListener{
 
     }
     
-    // Helper method to return GridBagConstraints objects
-    private GridBagConstraints getConstraints(int x, int y) {
-        GridBagConstraints c = new GridBagConstraints();
-        c.anchor = GridBagConstraints.LINE_START;
-        c.insets = new Insets(5, 5, 0, 5);
-        c.gridx = x;
-        c.gridy = y;
-        return c;
-    }
+    // // Helper method to return GridBagConstraints objects
+    // private GridBagConstraints getConstraints(int x, int y) {
+    //     GridBagConstraints c = new GridBagConstraints();
+    //     c.anchor = GridBagConstraints.LINE_START;
+    //     c.insets = new Insets(5, 5, 0, 5);
+    //     c.gridx = x;
+    //     c.gridy = y;
+    //     return c;
+    // }
     
     /**
      * This method starts the application
