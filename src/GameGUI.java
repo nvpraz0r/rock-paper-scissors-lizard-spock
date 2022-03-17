@@ -23,6 +23,8 @@ public class GameGUI extends JFrame implements ActionListener{
     public int score;
     JButton[] handButtons = new JButton[5];
     JButton rockButton, paperButton, scissorButton, lizardButton, spockButton;
+
+    Font myFont = new Font("Apple Casual",Font.PLAIN,25);
     
     /**
      * This method sets the look and feel
@@ -43,11 +45,21 @@ public class GameGUI extends JFrame implements ActionListener{
      */
     private void initComponents(){
         setTitle("RockPaperScissorsLizardSpock");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 500);
+        setLayout(null);
 
+        handButtons[0] = rockButton;
+        handButtons[1] = paperButton;
+        handButtons[2] = scissorButton;
+        handButtons[3] = lizardButton;
+        handButtons[4] = spockButton;
 
-
-
+        for (int i = 0; i < handButtons.length; i++) {
+            handButtons[i].addActionListener(this);
+            handButtons[i].setFont(myFont);
+            handButtons[i].setFocusable(false);
+        }
 
 
 
