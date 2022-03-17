@@ -11,6 +11,16 @@ import java.awt.event.*;
  *  -create rock paper scissors lizard spock
  *      + with images that a player can select???
  * 
+ * Left off:
+ * 
+ *  =working on computerChoice()
+ *      -use random num generator
+ *  =working on actionPerformed()
+ *      -checking user's choice
+ *  =working on validators
+ *      -change it to a different message type?
+ * 
+ * 
  */
 
 /**
@@ -20,7 +30,7 @@ public class GameGUI extends JFrame implements ActionListener{
     
     //class variables
     public int computerThrow;
-    public int score;
+    public String playerChoice;
     JButton[] handButtons = new JButton[5];
     JButton rockButton, paperButton, scissorButton, lizardButton, spockButton;
 
@@ -63,25 +73,16 @@ public class GameGUI extends JFrame implements ActionListener{
 
 
 
+
         setVisible(true);
     }
 
     /**
-     * This method resets key variables and text fields
+     * 
     */
-    public void setUpGame(){
+    public void computerChoice(){
 
     }
-    
-    // // Helper method to return GridBagConstraints objects
-    // private GridBagConstraints getConstraints(int x, int y) {
-    //     GridBagConstraints c = new GridBagConstraints();
-    //     c.anchor = GridBagConstraints.LINE_START;
-    //     c.insets = new Insets(5, 5, 0, 5);
-    //     c.gridx = x;
-    //     c.gridy = y;
-    //     return c;
-    // }
     
     /**
      * This method starts the application
@@ -94,6 +95,23 @@ public class GameGUI extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e){
+        if(e.getSource() == rockButton){
+            computerChoice();
 
+        } else if (e.getSource() == paperButton) {
+            computerChoice();
+
+        } else if (e.getSource() == scissorButton) {
+            computerChoice();
+
+        } else if (e.getSource() == lizardButton) {
+            computerChoice();
+
+        } else if (e.getSource() == spockButton) {
+            computerChoice();
+
+        } else {
+            //throw error?
+        }
     }
 }
