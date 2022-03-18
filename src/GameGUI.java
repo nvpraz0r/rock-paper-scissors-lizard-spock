@@ -5,19 +5,14 @@ import java.awt.event.*;
 
 /**
  * @author Jon/nvpraz0r
+
+ * To Do:
  * 
- * 
- * To do:
- *  -create rock paper scissors lizard spock
- *      + with images that a player can select???
- * 
- * Left off:
- * 
- *  =working on computerChoice()
+ *  =computerChoice()
  *      -use random num generator
- *  =working on actionPerformed()
+ *  =actionPerformed()
  *      -checking user's choice
- *  =working on validators
+ *  =notifications
  *      -change it to a different message type?
  */
 
@@ -56,6 +51,12 @@ public class GameGUI extends JFrame implements ActionListener{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 500);
         setLayout(null);
+
+        rockButton = new JButton("Rock");
+        paperButton = new JButton("Paper");
+        scissorButton = new JButton("Scissors");
+        lizardButton = new JButton("Lizard");
+        spockButton = new JButton("Spock");
 
         handButtons[0] = rockButton;
         handButtons[1] = paperButton;
