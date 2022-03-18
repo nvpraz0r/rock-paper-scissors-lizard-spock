@@ -89,6 +89,7 @@ public class GameGUI extends JFrame implements ActionListener{
             panel.add(handButtons[i]);
         }
 
+        //add panel to the frame
         add(panel);
 
         //make the window visible
