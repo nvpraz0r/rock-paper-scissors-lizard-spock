@@ -22,7 +22,6 @@ import java.awt.event.*;
 public class GameGUI extends JFrame implements ActionListener{
     
     //class variables
-    public int computerThrow;
     public String playerChoice;
     JButton[] handButtons = new JButton[7];
     JButton rockButton, paperButton, scissorButton, lizardButton, spockButton, randoButton, exitButton;
@@ -99,8 +98,34 @@ public class GameGUI extends JFrame implements ActionListener{
     /**
      * 
     */
-    public void computerChoice(){
+    public void computerChoice(String playerChoice){
+        Random rand = new Random();
+        int computerThrow = rand.nextInt(5) + 1;
 
+        switch (computerThrow) {
+            case 1: //rock
+                resultOfGame(1, playerChoice);
+                break;
+            case 2: //paper
+                resultOfGame(2, playerChoice);
+                break;
+            case 3: //scissor
+                resultOfGame(3, playerChoice);
+                break;
+            case 4: //lizard
+                resultOfGame(4, playerChoice);
+                break;
+            case 5: //spock
+                resultOfGame(5, playerChoice);
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    public void resultOfGame(int computerChoice, String playerChoice){
+        
     }
     
     /**
@@ -115,19 +140,24 @@ public class GameGUI extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == rockButton){
-            computerChoice();
+            playerChoice = "rock";
+            computerChoice(playerChoice);
 
         } else if (e.getSource() == paperButton) {
-            computerChoice();
+            playerChoice = "paper";
+            computerChoice(playerChoice);
 
         } else if (e.getSource() == scissorButton) {
-            computerChoice();
+            playerChoice = "scissors";
+            computerChoice(playerChoice);
 
         } else if (e.getSource() == lizardButton) {
-            computerChoice();
+            playerChoice = "lizard";
+            computerChoice(playerChoice);
 
         } else if (e.getSource() == spockButton) {
-            computerChoice();
+            playerChoice = "spock";
+            computerChoice(playerChoice);
 
         } else {
             //throw error?
