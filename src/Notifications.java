@@ -16,7 +16,7 @@ import javax.swing.text.JTextComponent;
 /**
  *  This class validates text field input
  */
-public class Validators {
+public class Notifications {
 
     private final Component parentComponent;
 
@@ -25,7 +25,7 @@ public class Validators {
      * This is a constructor method
      * @param parent
     */
-    public Validators(Component parent) {
+    public Notifications(Component parent) {
         this.parentComponent = parent;
     }
     

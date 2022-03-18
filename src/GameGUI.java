@@ -19,8 +19,6 @@ import java.awt.event.*;
  *      -checking user's choice
  *  =working on validators
  *      -change it to a different message type?
- * 
- * 
  */
 
 /**
