@@ -106,7 +106,6 @@ public class GameGUI extends JFrame implements ActionListener{
         if(e.getSource() == rockButton){
             playerChoice = "rock";
             computer.computerChoice(playerChoice);
-
         }
         
         if (e.getSource() == paperButton) {
@@ -117,19 +116,16 @@ public class GameGUI extends JFrame implements ActionListener{
         if (e.getSource() == scissorButton) {
             playerChoice = "scissors";
             computer.computerChoice(playerChoice);
-
         }
         
         if (e.getSource() == lizardButton) {
             playerChoice = "lizard";
             computer.computerChoice(playerChoice);
-
         }
         
         if (e.getSource() == spockButton) {
             playerChoice = "spock";
             computer.computerChoice(playerChoice);
-
         }
     }
 }

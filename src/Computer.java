@@ -144,8 +144,10 @@ public class Computer {
 
         if(gameResult == true){
             //win message
+            System.out.println("win");
         } else if(gameResult == false){
             //defeat message
+            System.out.println("lose");
         } else {
             //???
         }
