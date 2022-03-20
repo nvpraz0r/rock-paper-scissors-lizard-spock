@@ -46,57 +46,56 @@ public class Computer {
         }
 
         //paper win and lose conditions
-        if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 1){ //paper 
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 2){ //paper 
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 3){ //paper 
+        if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 1){ //paper win
             gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 4){ //paper 
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 5){ //paper 
+        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 2){ //paper tie
             gameResult = false;
+        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 3){ //paper lose
+            gameResult = false;
+        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 4){ //paper lose
+            gameResult = false;
+        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 5){ //paper win
+            gameResult = true;
         }
 
         //scissors win and lose conditions
-        if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 1){ //scissors 
+        if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 1){ //scissors lose
             gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 2){ //scissors 
+        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 2){ //scissors win
+            gameResult = true;
+        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 3){ //scissors tie
             gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 3){ //scissors 
+        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 4){ //scissors win
             gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 4){ //scissors 
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 5){ //scissors 
+        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 5){ //scissors lose
             gameResult = false;
         }
 
         //lizard win and lose conditions
-        if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 1){ //lizard 
+        if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 1){ //lizard lose
             gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 2){ //lizard 
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 3){ //lizard 
+        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 2){ //lizard win
             gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 4){ //lizard 
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 5){ //lizard 
+        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 3){ //lizard lose
             gameResult = false;
+        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 4){ //lizard tie
+            gameResult = false;
+        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 5){ //lizard win
+            gameResult = true;
         }
 
         //spock win and lose conditions
-        if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 1){ //spock 
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 2){ //spock 
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 3){ //spock 
+        if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 1){ //spock win
             gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 4){ //spock 
+        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 2){ //spock lose
+            gameResult = false;
+        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 3){ //spock win
             gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 5){ //spock 
+        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 4){ //spock lose
+            gameResult = false;
+        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 5){ //spock tie
             gameResult = false;
         }
-
 
         if(gameResult == true){
             //win message
