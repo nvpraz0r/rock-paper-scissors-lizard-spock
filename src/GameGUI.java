@@ -95,11 +95,6 @@ public class GameGUI extends JFrame implements ActionListener{
         //make the window visible
         setVisible(true);
     }
-
-    //display results
-    public void resultOfGame(int computerChoice, String playerChoice){
-        
-    }
     
     /**
      * This method starts the application
