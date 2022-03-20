@@ -2,15 +2,10 @@
  * @author Jon/nvpraz0r
 
  * To Do:
- * 
- *  =computerChoice()
- *      -use random num generator
- *  =actionPerformed()
- *      -checking user's choice
  *  =notifications
  *      -change it to a different message type?
  * 
- *  change: paper, scissor, lizard, spock; win lose conditions
+ *  double check win lose condition logic
  */
 
 import java.util.Random;
@@ -33,68 +28,118 @@ public class Computer {
         //1,2,3,4,5
 
         //rock win and lose conditions
-        if(playerChoice.equalsIgnoreCase("rock") && computerThrow == 1){ //rock tie
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("rock") && computerThrow == 2){ //rock lose
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("rock") && computerThrow == 3){ //rock win
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("rock") && computerThrow == 4){ //rock win
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("rock") && computerThrow == 5){ //rock lose
-            gameResult = false;
+        if(playerChoice.equalsIgnoreCase("rock")){
+            switch (computerThrow) {
+                case 1:
+                    gameResult = false; //rock v rock lose
+                    break;
+                case 2:
+                    gameResult = false; //rock v paper lose
+                    break;
+                case 3:
+                    gameResult = true; //rock v scissors win
+                    break;
+                case 4:
+                    gameResult = true; //rock v lizard win
+                    break;
+                case 5:
+                    gameResult = false; //rock v spock lose
+                    break;
+                default:
+                    break;
+            }
         }
 
         //paper win and lose conditions
-        if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 1){ //paper win
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 2){ //paper tie
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 3){ //paper lose
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 4){ //paper lose
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 5){ //paper win
-            gameResult = true;
+        if(playerChoice.equalsIgnoreCase("paper")){
+            switch (computerThrow) {
+                case 1:
+                    gameResult = true; //paper v rock win
+                    break;
+                case 2:
+                    gameResult = false; //paper v paper lose
+                    break;
+                case 3:
+                    gameResult = false; //paper v scissors lose
+                    break;
+                case 4:
+                    gameResult = false; //paper v lizard lose
+                    break;
+                case 5:
+                    gameResult = true; //paper v spock win
+                    break;
+                default:
+                    break;
+            }
         }
 
         //scissors win and lose conditions
-        if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 1){ //scissors lose
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 2){ //scissors win
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 3){ //scissors tie
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 4){ //scissors win
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("scissors") && computerThrow == 5){ //scissors lose
-            gameResult = false;
+        if(playerChoice.equalsIgnoreCase("scissors")){
+            switch (computerThrow) {
+                case 1:
+                    gameResult = false; //scissors v rock lose
+                    break;
+                case 2:
+                    gameResult = true; //scissors v paper win
+                    break;
+                case 3:
+                    gameResult = false; //scissors v scissors lose
+                    break;
+                case 4:
+                    gameResult = true; //scissors v lizard win
+                    break;
+                case 5:
+                    gameResult = false; //scissors v spock lose
+                    break;
+                default:
+                    break;
+            }
         }
 
         //lizard win and lose conditions
-        if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 1){ //lizard lose
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 2){ //lizard win
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 3){ //lizard lose
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 4){ //lizard tie
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("lizard") && computerThrow == 5){ //lizard win
-            gameResult = true;
+        if(playerChoice.equalsIgnoreCase("lizard")){
+            switch (computerThrow) {
+                case 1:
+                    gameResult = false; //lizard v rock lose
+                    break;
+                case 2:
+                    gameResult = true; //lizard v paper win
+                    break;
+                case 3:
+                    gameResult = false; //lizard v scissors lose
+                    break;
+                case 4:
+                    gameResult = false; //lizard v lizard lose
+                    break;
+                case 5:
+                    gameResult = true; //lizard v spock win
+                    break;
+                default:
+                    break;
+            }
         }
 
         //spock win and lose conditions
-        if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 1){ //spock win
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 2){ //spock lose
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 3){ //spock win
-            gameResult = true;
-        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 4){ //spock lose
-            gameResult = false;
-        } else if(playerChoice.equalsIgnoreCase("spock") && computerThrow == 5){ //spock tie
-            gameResult = false;
+        if(playerChoice.equalsIgnoreCase("spock")){
+            switch (computerThrow) {
+                case 1:
+                    gameResult = true; //spock v rock win
+                    break;
+                case 2:
+                    gameResult = false; //spock v paper lose
+                    break;
+                case 3:
+                    gameResult = true; //spock v scissors win
+                    break;
+                case 4:
+                    gameResult = false; //spock v lizard lose
+                    break;
+                case 5:
+                    gameResult = false; //spock v spock lose
+                    break;
+                default:
+                    break;
+            }
         }
 
         if(gameResult == true){

@@ -4,15 +4,11 @@ import java.awt.event.*;
 
 /**
  * @author Jon/nvpraz0r
-
  * To Do:
- * 
- *  =computerChoice()
- *      -use random num generator
- *  =actionPerformed()
- *      -checking user's choice
  *  =notifications
  *      -change it to a different message type?
+ * 
+ *  double check win lose condition logic
  */
 
 /**
@@ -111,24 +107,29 @@ public class GameGUI extends JFrame implements ActionListener{
             playerChoice = "rock";
             computer.computerChoice(playerChoice);
 
-        } else if (e.getSource() == paperButton) {
+        }
+        
+        if (e.getSource() == paperButton) {
             playerChoice = "paper";
             computer.computerChoice(playerChoice);
-
-        } else if (e.getSource() == scissorButton) {
+        }
+        
+        if (e.getSource() == scissorButton) {
             playerChoice = "scissors";
             computer.computerChoice(playerChoice);
 
-        } else if (e.getSource() == lizardButton) {
+        }
+        
+        if (e.getSource() == lizardButton) {
             playerChoice = "lizard";
             computer.computerChoice(playerChoice);
 
-        } else if (e.getSource() == spockButton) {
+        }
+        
+        if (e.getSource() == spockButton) {
             playerChoice = "spock";
             computer.computerChoice(playerChoice);
 
-        } else {
-            //throw error?
         }
     }
 }
