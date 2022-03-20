@@ -9,6 +9,9 @@
  *      -checking user's choice
  *  =notifications
  *      -change it to a different message type?
+ * 
+ * 
+ * Don't forget to change default return
  */
 
 import java.util.Random;
@@ -20,30 +23,45 @@ import java.util.Random;
 */
 public class Computer {
 
-    Results results = new Results();
 
     public void computerChoice(String playerChoice){
         Random rand = new Random();
         int computerThrow = rand.nextInt(5) + 1;
+        boolean gameResult = false;
+        String resultMessage = "";
+        
+        //rock,paper,scissor,lizard,spock
+        //1,2,3,4,5
 
-        switch (computerThrow) {
-            case 1: //rock
-                results.resultOfGame(1, playerChoice);
-                break;
-            case 2: //paper
-                results.resultOfGame(2, playerChoice);
-                break;
-            case 3: //scissor
-                results.resultOfGame(3, playerChoice);
-                break;
-            case 4: //lizard
-                results.resultOfGame(4, playerChoice);
-                break;
-            case 5: //spock
-                results.resultOfGame(5, playerChoice);
-                break;
-            default:
-                break;
+        //rock win and lose conditions
+        if(playerChoice.equalsIgnoreCase("rock") && computerThrow == 3){        //rock win
+            gameResult = true;
+        } else if(playerChoice.equalsIgnoreCase("rock") && computerThrow == 4){ //rock win
+            gameResult = true;
+        } else if(playerChoice.equalsIgnoreCase("rock") && computerThrow == 2){ //rock lose
+            gameResult = false;
+        } else if(playerChoice.equalsIgnoreCase("rock") && computerThrow == 5){ //rock lose
+            gameResult = false;
+        }
+
+        //paper win and lose conditions
+        if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 1){        //paper win
+            gameResult = true;
+        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 5){ //paper win
+            gameResult = true;
+        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 3){ //paper lose
+            gameResult = false;
+        } else if(playerChoice.equalsIgnoreCase("paper") && computerThrow == 5){ //paper lose
+            gameResult = false;
+        }
+
+
+        if(gameResult == true){
+            //win message
+        } else if(gameResult == false){
+            //defeat message
+        } else {
+            //???
         }
 
     }

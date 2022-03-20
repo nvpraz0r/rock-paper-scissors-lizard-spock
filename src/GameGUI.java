@@ -22,10 +22,8 @@ public class GameGUI extends JFrame implements ActionListener{
     
     //class variables
     public String playerChoice;
-    public int computerChoice;
     JButton[] handButtons = new JButton[7];
     JButton rockButton, paperButton, scissorButton, lizardButton, spockButton, randoButton, exitButton;
-    Computer computer = new Computer();
 
     Font myFont = new Font("Apple Casual",Font.PLAIN,25);
     
@@ -107,6 +105,8 @@ public class GameGUI extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e){
+        Computer computer = new Computer();
+
         if(e.getSource() == rockButton){
             playerChoice = "rock";
             computer.computerChoice(playerChoice);
