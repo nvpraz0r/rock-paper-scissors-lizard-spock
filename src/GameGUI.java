@@ -127,5 +127,10 @@ public class GameGUI extends JFrame implements ActionListener{
             playerChoice = "spock";
             computer.computerChoice(playerChoice);
         }
+
+        if (e.getSource() == randoButton) {
+            //create random #
+            //send to computer
+        }
     }
 }
