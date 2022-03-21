@@ -22,7 +22,7 @@ public class Computer {
         Random rand = new Random();
         int computerThrow = rand.nextInt(5) + 1;
         boolean gameResult = false;
-        String resultMessage = "";
+        String resultMessage, tieIndicator = "";
         
         //rock,paper,scissor,lizard,spock
         //1,2,3,4,5
@@ -31,7 +31,7 @@ public class Computer {
         if(playerChoice.equalsIgnoreCase("rock")){
             switch (computerThrow) {
                 case 1:
-                    gameResult = false; //rock v rock lose
+                    tieIndicator = "tie"; //rock v rock tie
                     break;
                 case 2:
                     gameResult = false; //rock v paper lose
@@ -57,7 +57,7 @@ public class Computer {
                     gameResult = true; //paper v rock win
                     break;
                 case 2:
-                    gameResult = false; //paper v paper lose
+                    tieIndicator = "tie"; //paper v paper tie
                     break;
                 case 3:
                     gameResult = false; //paper v scissors lose
@@ -83,7 +83,7 @@ public class Computer {
                     gameResult = true; //scissors v paper win
                     break;
                 case 3:
-                    gameResult = false; //scissors v scissors lose
+                    tieIndicator = "tie"; //scissors v scissors tie
                     break;
                 case 4:
                     gameResult = true; //scissors v lizard win
@@ -109,7 +109,7 @@ public class Computer {
                     gameResult = false; //lizard v scissors lose
                     break;
                 case 4:
-                    gameResult = false; //lizard v lizard lose
+                    tieIndicator = "tie"; //lizard v lizard tie
                     break;
                 case 5:
                     gameResult = true; //lizard v spock win
@@ -135,22 +135,26 @@ public class Computer {
                     gameResult = false; //spock v lizard lose
                     break;
                 case 5:
-                    gameResult = false; //spock v spock lose
+                    tieIndicator = "tie"; //spock v spock tie
                     break;
                 default:
                     break;
             }
         }
 
-        if(gameResult == true){
-            //win message
-            System.out.println("win");
-        } else if(gameResult == false){
-            //defeat message
-            System.out.println("lose");
+        if(tieIndicator.equalsIgnoreCase("")){
+            if(gameResult == true){
+                //win message
+                System.out.println("win");
+            } else if(gameResult == false){
+                //defeat message
+                System.out.println("lose");
+            } else {
+                //
+            }
         } else {
-            //???
+            System.out.println(tieIndicator);
+            tieIndicator = "";
         }
-
     }
 }
