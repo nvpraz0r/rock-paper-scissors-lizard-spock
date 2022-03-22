@@ -17,7 +17,6 @@ import java.util.Random;
 */
 public class Computer {
 
-
     public void computerChoice(String playerChoice){
         Random rand = new Random();
         int computerThrow = rand.nextInt(5) + 1;
@@ -142,19 +141,17 @@ public class Computer {
             }
         }
 
-        if(tieIndicator.equalsIgnoreCase("")){
-            if(gameResult == true){
-                //win message
-                System.out.println("win");
-            } else if(gameResult == false){
-                //defeat message
-                System.out.println("lose");
-            } else {
-                //
-            }
-        } else {
+        //check for tie then check for other conditions
+        if(tieIndicator.equalsIgnoreCase("tie")){
+            //tie message
             System.out.println(tieIndicator);
             tieIndicator = "";
+        } else if(gameResult == true){
+            //win message
+            System.out.println("win");
+        } else if(gameResult == false){
+            //defeat message
+            System.out.println("lose");
         }
     }
 }
