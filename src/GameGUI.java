@@ -14,7 +14,7 @@ public class GameGUI extends JFrame implements ActionListener{
     
     //class variables
     JButton[] handButtons = new JButton[7];
-    JButton rockButton, paperButton, scissorButton, lizardButton, spockButton, randoButton, exitButton;
+    JButton rockButton, paperButton, scissorButton, lizardButton, spockButton, randomButton, exitButton;
 
     Font myFont = new Font("Apple Casual",Font.PLAIN,25);
     
@@ -47,7 +47,7 @@ public class GameGUI extends JFrame implements ActionListener{
         scissorButton = new JButton("Scissors");
         lizardButton = new JButton("Lizard");
         spockButton = new JButton("Spock");
-        randoButton = new JButton("Random");
+        randomButton = new JButton("Random");
         exitButton = new JButton("Exit");
 
         //assign values to button array
@@ -56,7 +56,7 @@ public class GameGUI extends JFrame implements ActionListener{
         handButtons[2] = scissorButton;
         handButtons[3] = lizardButton;
         handButtons[4] = spockButton;
-        handButtons[5] = randoButton;
+        handButtons[5] = randomButton;
         handButtons[6] = exitButton;
 
 
@@ -118,7 +118,7 @@ public class GameGUI extends JFrame implements ActionListener{
             gameLogic.GameLogic("spock");
         }
 
-        if (e.getSource() == randoButton) {
+        if (e.getSource() == randomButton) {
             Random randomNumber = new Random();
             int randomChoice = randomNumber.nextInt(5) + 1;
             //create random #
