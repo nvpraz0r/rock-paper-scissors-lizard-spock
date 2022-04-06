@@ -15,9 +15,9 @@ import java.util.Random;
  * This class represents
  * the computer or opponent
 */
-public class Computer {
+public class Logic {
 
-    public void computerChoice(String playerChoice){
+    public void GameLogic(String playerChoice){
         Random rand = new Random();
         int computerThrow = rand.nextInt(5) + 1;
         boolean gameResult = false;

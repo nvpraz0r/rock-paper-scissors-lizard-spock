@@ -101,26 +101,26 @@ public class GameGUI extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e){
-        Computer computer = new Computer();
+        Logic gameLogic = new Logic();
 
         if(e.getSource() == rockButton){
-            computer.computerChoice("rock");
+            gameLogic.GameLogic("rock");
         }
         
         if (e.getSource() == paperButton) {
-            computer.computerChoice("paper");
+            gameLogic.GameLogic("paper");
         }
         
         if (e.getSource() == scissorButton) {
-            computer.computerChoice("scissors");
+            gameLogic.GameLogic("scissors");
         }
         
         if (e.getSource() == lizardButton) {
-            computer.computerChoice("lizard");
+            gameLogic.GameLogic("lizard");
         }
         
         if (e.getSource() == spockButton) {
-            computer.computerChoice("spock");
+            gameLogic.GameLogic("spock");
         }
 
         if (e.getSource() == randoButton) {
@@ -130,19 +130,19 @@ public class GameGUI extends JFrame implements ActionListener{
             //send to computer
             switch(randomChoice){
                 case 1:
-                    computer.computerChoice("rock");
+                    gameLogic.GameLogic("rock");
                     break;
                 case 2:
-                    computer.computerChoice("paper");
+                    gameLogic.GameLogic("paper");
                     break;
                 case 3:
-                    computer.computerChoice("scissors");
+                    gameLogic.GameLogic("scissors");
                     break;
                 case 4:
-                    computer.computerChoice("lizard");
+                    gameLogic.GameLogic("lizard");
                     break;
                 case 5:
-                    computer.computerChoice("spock");
+                    gameLogic.GameLogic("spock");
                     break;
             }
         }
