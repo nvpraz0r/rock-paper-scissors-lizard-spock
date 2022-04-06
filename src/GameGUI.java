@@ -5,11 +5,6 @@ import java.util.Random;
 
 /**
  * @author Jon/nvpraz0r
- * To Do:
- *  =notifications
- *      -change it to a different message type?
- * 
- *  double check win lose condition logic
  */
 
 /**
