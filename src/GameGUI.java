@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Random;
 
 /**
  * @author Jon/nvpraz0r
@@ -17,7 +18,6 @@ import java.awt.event.*;
 public class GameGUI extends JFrame implements ActionListener{
     
     //class variables
-    public String playerChoice;
     JButton[] handButtons = new JButton[7];
     JButton rockButton, paperButton, scissorButton, lizardButton, spockButton, randoButton, exitButton;
 
@@ -104,33 +104,47 @@ public class GameGUI extends JFrame implements ActionListener{
         Computer computer = new Computer();
 
         if(e.getSource() == rockButton){
-            playerChoice = "rock";
-            computer.computerChoice(playerChoice);
+            computer.computerChoice("rock");
         }
         
         if (e.getSource() == paperButton) {
-            playerChoice = "paper";
-            computer.computerChoice(playerChoice);
+            computer.computerChoice("paper");
         }
         
         if (e.getSource() == scissorButton) {
-            playerChoice = "scissors";
-            computer.computerChoice(playerChoice);
+            computer.computerChoice("scissors");
         }
         
         if (e.getSource() == lizardButton) {
-            playerChoice = "lizard";
-            computer.computerChoice(playerChoice);
+            computer.computerChoice("lizard");
         }
         
         if (e.getSource() == spockButton) {
-            playerChoice = "spock";
-            computer.computerChoice(playerChoice);
+            computer.computerChoice("spock");
         }
 
         if (e.getSource() == randoButton) {
+            Random randomNumber = new Random();
+            int randomChoice = randomNumber.nextInt(5) + 1;
             //create random #
             //send to computer
+            switch(randomChoice){
+                case 1:
+                    computer.computerChoice("rock");
+                    break;
+                case 2:
+                    computer.computerChoice("paper");
+                    break;
+                case 3:
+                    computer.computerChoice("scissors");
+                    break;
+                case 4:
+                    computer.computerChoice("lizard");
+                    break;
+                case 5:
+                    computer.computerChoice("spock");
+                    break;
+            }
         }
     }
 }
