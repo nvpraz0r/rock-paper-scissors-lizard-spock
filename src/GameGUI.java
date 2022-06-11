@@ -1,8 +1,3 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.Random;
-
 /**
  * @author Jon/nvpraz0r
  */
@@ -10,6 +5,12 @@ import java.util.Random;
 /**
  * This class implements the UI for the game
  */
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.Random;
+
 public class GameGUI extends JFrame implements ActionListener{
     
     //class variables
